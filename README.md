@@ -1,5 +1,9 @@
 # Technical Test - Vue.js Onboarding Component
 
+![Vercel](https://vercelbadge.vercel.app/api/MaxLeblc/OnboardingComponent)
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+
 This project was created as part of the recruitment process for an apprentice developer position.
 
 ## 🌟 Live Demo
