@@ -1,0 +1,37 @@
+[
+  {
+    "targetId": "header-title",
+    "title": "Bienvenue !",
+    "description": "Ce guide va vous montrer les fonctionnalités principales de notre application. Vous pouvez naviguer entre les étapes en utilisant les boutons Précédent et Suivant.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/3284/3284504.png",
+    "actiontext": "Commencer"
+  },
+  {
+    "targetId": "user-profile",
+    "title": "Votre Profil",
+    "description": "Ici, vous pouvez voir et modifier les informations de votre profil. Assurez-vous que vos informations sont à jour pour une meilleure expérience.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/4086/4086683.png",
+    "actiontext": "Suivant"
+  },
+  {
+    "targetId": "sidebar-navigation",
+    "title": "Navigation Latérale",
+    "description": "Utilisez la barre de navigation latérale pour accéder rapidement aux différentes fonctionnalités de l'application.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/14380/14380729.png",
+    "actiontext": "Suivant"
+  },
+  {
+    "targetId": "main-dashboard",
+    "title": "Votre Tableau de Bord",
+    "description": "Ici, vous pouvez gérer les paramètres de votre tableau de bord et vos outils de publication.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/6919/6919664.png",
+    "actiontext": "Suivant"
+  },
+  {
+    "targetId": "action-button",
+    "title": "Prêt à commencer ?",
+    "description": "Vous avez terminé le guide. Vous pouvez maintenant explorer l'application par vous-même.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/1719/1719835.png",
+    "actiontext": "Terminer"
+  }
+]
