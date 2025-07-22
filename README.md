@@ -2,6 +2,10 @@
 
 This project was created as part of the recruitment process for an apprentice developer position.
 
+## 🌟 Live Demo
+
+**[View the live demo on Vercel](https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app)**
+
 ## Objective
 
 The goal was to create a "Step-by-Step Guide" onboarding component in Vue.js. The component must be configurable via an external file and capable of positioning itself dynamically relative to HTML elements on the page.
@@ -87,6 +91,23 @@ To modify the guide steps, edit the `src/assets/onboarding-steps.json` file:
 - ✅ **Smart Positioning**: Never goes off-screen
 - ✅ **HTML Support**: Rich text in descriptions
 - ✅ **Smooth Animations**: Professional user experience
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel** with automatic deployment from the GitHub repository:
+
+- **Live URL**: [https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app](https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app)
+- **GitHub Repository**: [https://github.com/MaxLeblc/OnboardingComponent](https://github.com/MaxLeblc/OnboardingComponent)
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Framework**: Vue.js 3 with Vite
+
+### Deployment Features
+
+- 🔄 **Automatic Deployment**: Every push to the main branch triggers a new deployment
+- ⚡ **Fast Build**: Optimized Vite build process (~15 seconds)
+- 🌍 **Global CDN**: Fast loading worldwide
+- 📱 **Mobile Optimized**: Responsive design tested on all devices
 - ✅ **Easy Configuration**: JSON-based setup
 - ✅ **Clean Code**: Well-structured and maintainable
 - ✅ **Modern Stack**: Vue 3 + Vite + ES6+
