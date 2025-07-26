@@ -1,0 +1,32 @@
+[
+  {
+    "targetId": "analytics-overview",
+    "title": "Analytics et Insights",
+    "description": "Découvrez les performances détaillées de vos publications avec des métriques avancées et des recommandations.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5569/5569799.png"
+  },
+  {
+    "targetId": "performance-charts",
+    "title": "Graphiques de Performance",
+    "description": "Ces graphiques vous montrent l'évolution de votre engagement, reach et impressions au fil du temps.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5569/5569767.png"
+  },
+  {
+    "targetId": "platform-breakdown",
+    "title": "Répartition par Plateforme",
+    "description": "Comparez les performances de vos contenus sur différents réseaux sociaux pour optimiser votre stratégie.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5569/5569615.png"
+  },
+  {
+    "targetId": "top-posts",
+    "title": "Publications les plus performantes",
+    "description": "Découvrez les publications qui ont généré le plus d'engagement et de reach.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/11071/11071896.png"
+  },
+  {
+    "targetId": "ai-insights",
+    "title": "Recommandations IA",
+    "description": "Notre IA analyse vos données et vous propose des recommandations personnalisées pour améliorer vos performances.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5569/5569854.png"
+  }
+]

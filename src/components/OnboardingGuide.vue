@@ -26,6 +26,7 @@ const emit = defineEmits(['close'])
 // --- Reactive state ---
 const currentStepIndex = ref(0) // Tracks the current step in the onboarding guide.
 const isActive = ref(true) // Control guide visibility.
+const isPositioned = ref(false) // Control if the guide is positioned correctly
 const position = ref({
   // Position of the guide on the screen.
   top: '50%',
@@ -44,6 +45,7 @@ const isLastStep = computed(() => currentStepIndex.value === props.steps.length 
 // --- Methods ---
 function nextStep() {
   if (!isLastStep.value) {
+    isPositioned.value = false // Hide guide during transition
     currentStepIndex.value++
   } else {
     closeGuide() // If it's the last step, close the guide.
@@ -52,6 +54,7 @@ function nextStep() {
 
 function prevStep() {
   if (!isFirstStep.value) {
+    isPositioned.value = false // Hide guide during transition
     currentStepIndex.value--
   }
 }
@@ -59,6 +62,64 @@ function prevStep() {
 function closeGuide() {
   isActive.value = false
   emit('close') // Emit the close event to the parent component.
+}
+
+// Function to find the scrollable container for an element
+function findScrollableContainer(element) {
+  let parent = element.parentElement
+  
+  while (parent && parent !== document.body) {
+    const style = window.getComputedStyle(parent)
+    if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
+      return parent
+    }
+    parent = parent.parentElement
+  }
+  
+  // If no scrollable container found, use window
+  return null
+}
+
+// Function to scroll smoothly to target element
+function scrollToElement(targetElement) {
+  // Find the appropriate scrollable container
+  const scrollContainer = findScrollableContainer(targetElement)
+  
+  if (scrollContainer) {
+    // Scroll within the container
+    const containerRect = scrollContainer.getBoundingClientRect()
+    const elementRect = targetElement.getBoundingClientRect()
+    
+    // Calculate position relative to the container
+    const containerScrollTop = scrollContainer.scrollTop
+    const elementTopInContainer = elementRect.top - containerRect.top + containerScrollTop
+    const containerHeight = containerRect.height
+    const elementHeight = elementRect.height
+    
+    // Position the element in the center of the container if possible
+    const scrollTo = elementTopInContainer - (containerHeight / 2) + (elementHeight / 2)
+    
+    // Use instant scroll to avoid visual delay
+    scrollContainer.scrollTo({
+      top: Math.max(0, scrollTo),
+      behavior: 'instant'
+    })
+  } else {
+    // Scroll the main window
+    const rect = targetElement.getBoundingClientRect()
+    const elementTop = rect.top + window.scrollY
+    const elementHeight = rect.height
+    const windowHeight = window.innerHeight
+    
+    // Position the element in the center of the screen if possible
+    const scrollTo = elementTop - (windowHeight / 2) + (elementHeight / 2)
+    
+    // Use instant scroll to avoid visual delay
+    window.scrollTo({
+      top: Math.max(0, scrollTo),
+      behavior: 'instant'
+    })
+  }
 }
 
 // Calculate optimal position for the guide
@@ -111,11 +172,21 @@ function calculatePosition(targetElement) {
 watch(
   currentStep,
   (newStep) => {
+    // Hide the guide while positioning
+    isPositioned.value = false
+    
     // Wait for the DOM to update before calculating positions.
     nextTick(() => {
       const targetElement = document.getElementById(newStep.targetId)
       if (targetElement) {
-        position.value = calculatePosition(targetElement)
+        // First, scroll to the element instantly
+        scrollToElement(targetElement)
+        
+        // Then immediately calculate position and show the guide
+        nextTick(() => {
+          position.value = calculatePosition(targetElement)
+          isPositioned.value = true
+        })
       } else {
         // If the target element is not found, center the guide.
         console.warn(`[OnboardingGuide] Element with ID "${newStep.targetId}" not found.`)
@@ -124,6 +195,8 @@ watch(
           left: '50%',
           transform: 'translate(-50%, -50%)',
         }
+        // Show the guide even if centered
+        isPositioned.value = true
       }
     })
   },
@@ -134,7 +207,12 @@ watch(
 <template>
   <transition name="fade">
     <div v-if="isActive" class="onboarding-overlay" @click="closeGuide">
-      <div class="onboarding-guide" :style="position" @click.stop>
+      <div 
+        v-if="isPositioned"
+        class="onboarding-guide" 
+        :style="position" 
+        @click.stop
+      >
         <img
           v-if="currentStep.imageUrl"
           :src="currentStep.imageUrl"
@@ -180,7 +258,6 @@ watch(
   padding: 20px;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
 

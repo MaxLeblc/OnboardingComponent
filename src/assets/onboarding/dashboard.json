@@ -1,0 +1,58 @@
+[
+  {
+    "targetId": "header-title",
+    "title": "Bienvenue dans Social Manager !",
+    "description": "Découvrons ensemble votre plateforme de gestion des réseaux sociaux. Ce guide vous accompagnera étape par étape.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/3284/3284504.png",
+    "actiontext": "Commencer",
+    "category": "introduction"
+  },
+  {
+    "targetId": "sidebar-navigation",
+    "title": "Navigation de l'application",
+    "description": "Cette barre latérale vous permet de naviguer entre Dashboard, Publications, Calendrier et Analytics. Explorons d'abord le Dashboard !",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/14380/14380729.png",
+    "actiontext": "Découvrir le Dashboard",
+    "category": "navigation"
+  },
+  {
+    "targetId": "dashboard-overview",
+    "title": "Votre Dashboard - Vue d'ensemble",
+    "description": "Voici votre tableau de bord principal ! C'est ici que vous suivez vos performances globales sur tous vos réseaux sociaux.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/8456/8456517.png",
+    "actiontext": "Explorer les métriques",
+    "category": "dashboard"
+  },
+  {
+    "targetId": "metrics-grid",
+    "title": "Métriques de Performance",
+    "description": "Ces cartes affichent vos statistiques clés en temps réel : publications, engagement, followers et impressions. Gardez un œil sur ces indicateurs !",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/7508/7508857.png",
+    "actiontext": "Voir les actions rapides",
+    "category": "dashboard"
+  },
+  {
+    "targetId": "quick-actions",
+    "title": "Actions Rapides",
+    "description": "Ces boutons vous donnent accès instantané aux fonctions les plus utilisées : créer une publication, voir le calendrier, analyser les performances.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5256/5256870.png",
+    "actiontext": "Découvrir l'aide",
+    "category": "dashboard"
+  },
+  {
+    "targetId": "user-profile",
+    "title": "Votre Profil",
+    "description": "N'oubliez pas de compléter votre profil ! Des informations à jour améliorent votre expérience et l'efficacité de la plateforme.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/4086/4086683.png",
+    "actiontext": "Finaliser",
+    "category": "profile"
+  },
+  {
+    "targetId": "guide-button",
+    "title": "Besoin d'aide ?",
+    "description": "Ce bouton Guide est votre meilleur ami ! Cliquez dessus sur n'importe quelle page pour obtenir de l'aide contextuelle.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/868/868681.png",
+    "actiontext": "Terminer le guide",
+    "category": "help"
+  }
+]

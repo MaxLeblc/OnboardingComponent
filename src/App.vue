@@ -1,16 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import stepsData from './assets/onboarding-steps.json'
-import OnboardingGuide from './components/OnboardingGuide.vue'
-
-// Reactive state to control the visibility of the onboarding guide.
-const showGuide = ref(false)
-
-// Function to start the onboarding process.
-function startOnboarding() {
-  showGuide.value = true
-  console.log('Onboarding guide started')
-}
+// App.vue is now just a layout container
+// Individual guides are handled by each view
 </script>
 
 <template>
@@ -19,7 +9,7 @@ function startOnboarding() {
       <img
         src="https://cdn.prod.website-files.com/65ba50169b2581e889a000ba/65bb79b843b4aeb5243b764b_mashup-web-social-logo.svg"
         alt="Logo"
-        width="100 "
+        width="100"
         loading="lazy"
       />
       <div id="user-profile">
@@ -30,24 +20,16 @@ function startOnboarding() {
 
     <aside>
       <nav id="sidebar-navigation" class="sidebar-nav">
-        <a href="#">Overview</a>
-        <a href="#">Pages</a>
-        <a href="#">Content</a>
-        <div class="actions">
-          <button @click="startOnboarding" id="action-button" class="start-btn">
-            Lancer le guide d'aide
-          </button>
-        </div>
+        <router-link to="/dashboard">📊 Dashboard</router-link>
+        <router-link to="/publications">📝 Publications</router-link>
+        <router-link to="/calendar">📅 Calendrier</router-link>
+        <router-link to="/analytics">📈 Analytics</router-link>
       </nav>
     </aside>
 
     <main>
-      <div id="main-dashboard" class="dashboard">
-        <p>(Contenu principal du tableau de bord)</p>
-      </div>
+      <router-view />
     </main>
-
-    <OnboardingGuide v-if="showGuide" :steps="stepsData" @close="showGuide = false" />
   </div>
 </template>
 
@@ -67,10 +49,17 @@ function startOnboarding() {
   --white: white;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 !important;
   padding: 0 !important;
   min-height: 100vh !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 #app {
@@ -133,7 +122,7 @@ aside {
   background-color: var(--background-light);
 }
 
-.sidebar-nav a.active {
+.sidebar-nav a.router-link-active {
   background-color: var(--primary-color);
   color: var(--white);
 }
@@ -154,67 +143,21 @@ main {
   grid-area: main;
   padding: 2rem;
   overflow-y: auto;
+  background: var(--background-gray);
 }
 
-.dashboard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: var(--white);
-  border-radius: 8px;
-  height: 100%;
-  min-height: 200px;
-  color: var(--text-dark);
-}
-.actions {
-  margin-bottom: 1rem;
-}
-.start-btn {
-  padding: 10px 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: var(--button-color);
-  color: var(--white);
-  border: none;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  animation: shiny-effect 2s ease-in-out 2;
-}
-
-.start-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: shine 2s ease-in-out 2;
-}
-
-@keyframes shine {
-  0% {
-    left: -100%;
+/* Responsive */
+@media (max-width: 768px) {
+  #app-layout {
+    grid-template-areas:
+      'header'
+      'main';
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--header-height) 1fr;
   }
-  50% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-@keyframes shiny-effect {
-  0%,
-  100% {
-    box-shadow: 0 0 5px var(--button-glow-color);
-  }
-  50% {
-    box-shadow:
-      0 0 20px var(--button-glow-intense),
-      0 0 30px var(--button-glow-color);
+  
+  aside {
+    display: none;
   }
 }
 </style>

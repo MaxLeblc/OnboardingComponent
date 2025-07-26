@@ -1,0 +1,26 @@
+[
+  {
+    "targetId": "calendar-view",
+    "title": "Vue Calendrier",
+    "description": "Visualisez toutes vos publications programmées dans ce calendrier mensuel. Chaque jour montre vos posts planifiés.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/1254/1254275.png"
+  },
+  {
+    "targetId": "calendar-navigation",
+    "title": "Navigation du Calendrier",
+    "description": "Utilisez ces flèches pour naviguer entre les mois et planifier vos contenus sur le long terme.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5397/5397739.png"
+  },
+  {
+    "targetId": "scheduled-posts",
+    "title": "Publications Programmées",
+    "description": "Cliquez sur une publication dans le calendrier pour la modifier, la reprogrammer ou voir ses détails.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/12337/12337115.png"
+  },
+  {
+    "targetId": "day-sidebar",
+    "title": "Détails du Jour",
+    "description": "Cette sidebar affiche tous les détails des publications prévues pour le jour sélectionné.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/2435/2435094.png"
+  }
+]

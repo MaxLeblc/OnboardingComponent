@@ -1,0 +1,26 @@
+[
+  {
+    "targetId": "post-editor",
+    "title": "Créer vos Publications",
+    "description": "Utilisez cet éditeur pour rédiger vos posts. Vous pouvez ajouter du texte, des hashtags et programmer la publication.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/5892/5892996.png"
+  },
+  {
+    "targetId": "platform-selector",
+    "title": "Sélectionner les Plateformes",
+    "description": "Choisissez sur quels réseaux sociaux vous souhaitez publier votre contenu. Vous pouvez sélectionner plusieurs plateformes.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/3391/3391090.png"
+  },
+  {
+    "targetId": "schedule-section",
+    "title": "Planifier vos Posts",
+    "description": "Programmez vos publications pour qu'elles soient publiées automatiquement au moment optimal.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/6750/6750685.png"
+  },
+  {
+    "targetId": "posts-list",
+    "title": "Gérer vos Publications",
+    "description": "Voici la liste de toutes vos publications avec leur statut : brouillon, programmées ou publiées.",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/128/1721/1721929.png"
+  }
+]
