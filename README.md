@@ -9,7 +9,7 @@ This project demonstrates a complete **Social Media Management Application** wit
 
 ## 🌟 Live Demo
 
-**[View the live demo on Vercel](https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app)**
+**[View the live demo on Vercel](https://onboarding-component-2m1w1yvje-maxlebdevs-projects.vercel.app)**
 
 ## 📋 Application Overview
 
@@ -237,7 +237,7 @@ The application uses CSS custom properties for easy theming:
 
 This project is deployed on **Vercel** with automatic deployment from the GitHub repository:
 
-- **Live URL**: [https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app](https://onboarding-component-8sm98wc4p-maxlebdevs-projects.vercel.app)
+- **Live URL**: [https://onboarding-component-2m1w1yvje-maxlebdevs-projects.vercel.app](https://onboarding-component-2m1w1yvje-maxlebdevs-projects.vercel.app)
 - **GitHub Repository**: [https://github.com/MaxLeblc/OnboardingComponent](https://github.com/MaxLeblc/OnboardingComponent)
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
